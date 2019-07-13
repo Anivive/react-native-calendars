@@ -21,6 +21,8 @@ class ReactComp extends Component {
     renderItem: PropTypes.func,
     // specify how each date should be rendered. day can be undefined if the item is not first in that day.
     renderDay: PropTypes.func,
+    // determine if day should be displayed above or beside item
+    dayColumn: PropTypes.bool,
     // specify how empty date content with no items should be rendered
     renderEmptyDate: PropTypes.func,
     // callback that gets called when day changes while scrolling agenda list
@@ -118,6 +120,7 @@ class ReactComp extends Component {
           item={item}
           renderItem={this.props.renderItem}
           renderDay={this.props.renderDay}
+          dayColumn={this.props.dayColumn}
           renderEmptyDate={this.props.renderEmptyDate}
           theme={this.props.theme}
           rowHasChanged={this.props.rowHasChanged}
